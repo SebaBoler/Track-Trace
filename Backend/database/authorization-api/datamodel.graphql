@@ -1,0 +1,26 @@
+type User {
+  id: ID! @unique
+  ownerId: [Contractor!]! @relation(name: "UsersByContractor")
+  name: String
+  email: String! @unique
+  password: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  isTemporary: Boolean! @default(value: "true")
+  Role: RoleType @default(value: "IsTempUser")
+}
+
+type Contractor {
+  id: ID! @unique
+  symbol: String!
+  name: String!
+  nip: Int!
+  regon: Int
+}
+
+enum RoleType {
+    IsAdmin,
+    IsUser,
+    IsOwner,
+    IsTempUser
+}
