@@ -1,0 +1,24 @@
+projects:
+  # licence-api:
+  #   schemaPath: src/generated/licence-api.graphql
+  #   extensions:
+  #     prisma: database/licence-api/prisma.yml
+  #     codegen:
+  #       - generator: prisma-binding
+  #         language: javascript
+  #         output:
+  #           binding: src/generated/licence-api.js
+  authorization-api:
+    schemaPath: src/generated/authorization-api.graphql
+    extensions:
+      prisma: database/authorization-api/prisma.yml
+      codegen:
+        - generator: prisma-binding
+          language: javascript
+          output:
+            binding: src/generated/authorization-api.js
+  app:
+    schemaPath: src/schema.graphql
+    extensions:
+      endpoints:
+default: http://localhost:4000

@@ -1,0 +1,14 @@
+{
+  "name": "Frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.10.0",
+    "babel-plugin-import": "^1.9.1",
+    "next": "^7.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
