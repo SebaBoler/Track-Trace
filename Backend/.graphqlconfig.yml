@@ -1,13 +1,13 @@
 projects:
-  # licence-api:
-  #   schemaPath: src/generated/licence-api.graphql
-  #   extensions:
-  #     prisma: database/licence-api/prisma.yml
-  #     codegen:
-  #       - generator: prisma-binding
-  #         language: javascript
-  #         output:
-  #           binding: src/generated/licence-api.js
+  tracktrace-api:
+    schemaPath: src/generated/tracktrace-api.graphql
+    extensions:
+      prisma: database/tracktrace-api/prisma.yml
+      codegen:
+        - generator: prisma-binding
+          language: javascript
+          output:
+            binding: src/generated/tracktrace-api.js
   authorization-api:
     schemaPath: src/generated/authorization-api.graphql
     extensions:
