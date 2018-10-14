@@ -1,0 +1,12 @@
+endpoint: http://localhost:4466/authorization/dev
+# endpoint: ${env:AUTHORIZATION_SERVICE_ENDPOINT}
+# secret: ${env:AUTHORIZATION_SERVICE_SECRET}
+datamodel: datamodel.graphql
+# seed:
+# import: seed-authorization.graphql
+hooks:
+  post-deploy:
+    # - graphql get-schema -e development.env -p authorization-api --interactive
+    - echo "Deployment finished"
+    - graphql get-schema -p authorizationApi
+    - graphql codegen

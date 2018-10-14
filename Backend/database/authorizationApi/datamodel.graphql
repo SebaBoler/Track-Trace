@@ -1,0 +1,26 @@
+type User {
+  id: ID! @unique
+  # ownerId: Contractor!
+  name: String
+  email: String! @unique
+  password: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  isTemporary: Boolean! @default(value: "true")
+  Role: RoleType @default(value: "TEMPUSER")
+}
+
+# type Contractor {
+#   id: ID! @unique
+#   symbol: String! @unique
+#   name: String!
+#   nip: Float! @unique
+#   regon: Int
+# }
+
+enum RoleType {
+  ADMIN
+  USER
+  TEMPUSER
+  OWNER
+}

@@ -1,9 +1,10 @@
-
+# endpoint: ${env:TRACKTRACE_SERVICE_ENDPOINT}
+# secret: ${env:TRACKTRACE_SERVICE_SECRET}
 endpoint: http://localhost:4466/tracktrace/dev
-# endpoint: ${env:AUTHORIZATION_SERVICE_ENDPOINT}
 datamodel: datamodel.graphql
-seed:
-  import: seed-tracktrace.graphql
+# seed:
+# import: seed-tracktrace.graphql
 hooks:
-  post-deploy:  
-    graphql get-schema --project tracktrace-api
+  post-deploy:
+    # - graphql get-schema -e development.env -p tracktrace-api
+    - graphql get-schema -p tracktrace-api
