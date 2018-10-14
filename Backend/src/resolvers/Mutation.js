@@ -3,7 +3,7 @@ import { sign } from 'jsonwebtoken'
 
 const Mutation = {
      createUser: async(parent, args, ctx, info) => {
-        const emailTaken = await ctx.authorizationApi.user({ email })
+        const emailTaken = await ctx.authorizationApi.exists.User({ email: args.data.email.toLowerCase() })
 
         if (emailTaken) {
             throw new Error('Email taken')
